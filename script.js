@@ -1,8 +1,4 @@
-// Smooth scroll effect
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        document.querySelector(link.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
-    });
-});
+function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("show");
+}
