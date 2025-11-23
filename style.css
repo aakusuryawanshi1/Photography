@@ -1,0 +1,253 @@
+/* GLOBAL STYLE */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* LOGO GLOW ANIMATION */
+.glow-animate {
+    animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(0,255,255,0.4))
+                drop-shadow(0 0 4px rgba(0,255,255,0.3));
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 8px rgba(0,255,255,0.8))
+                drop-shadow(0 0 14px rgba(0,255,255,0.6))
+                drop-shadow(0 0 20px rgba(0,255,255,0.4));
+        transform: scale(1.04);
+    }
+    100% {
+        filter: drop-shadow(0 0 2px rgba(0,255,255,0.4))
+                drop-shadow(0 0 4px rgba(0,255,255,0.3));
+        transform: scale(1);
+    }
+}
+
+.logo span {
+    font-size: 26px;
+    font-weight: 700;
+    color: teal;
+}
+
+/* NAV LINKS */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: teal;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.hero h1 {
+    font-size: 65px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 16px 35px;
+    background: teal;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* SECTION SPACING */
+section {
+    padding-top: 100px;
+}
+
+/* PORTFOLIO */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.category-title {
+    margin: 30px 0 10px;
+    font-size: 26px;
+    font-weight: 600;
+    padding-left: 40px;
+}
+
+.image-grid {
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 25px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ABOUT */
+.about {
+    padding: 60px 40px;
+    background: #f4ffff;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* PREMIUM CONTACT SECTION */
+.contact {
+    padding: 90px 40px;
+    text-align: center;
+    background: #f9ffff;
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    margin-bottom: 60px;
+    color: #444;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    width: 330px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 2px solid #e0f7f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.contact-card h3 {
+    font-size: 26px;
+    color: teal;
+    margin-bottom: 18px;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.contact-line .icon {
+    font-size: 20px;
+}
+
+.contact-line p {
+    margin: 0;
+    font-size: 17px;
+    color: #333;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: teal;
+    color: white;
+    margin-top: 40px;
+}
